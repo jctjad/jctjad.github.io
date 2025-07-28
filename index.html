@@ -17,76 +17,71 @@
 
     <!-- Navbar goes here -->
     <nav class="sticky top-0 bg-gray-100 z-50 shadow-lg py-2 w-full">
-        <!-- Main menu -->
         <div class="container mx-auto px-0">
             <div class="flex justify-center">
     
-                    <!-- Primary Navbar items -->
-                    <div class="hidden md:flex items-center h-12 mt-1.5 space-x-16">
-    
-                        <a href="#home" class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500">
-                            <i class="fas fa-home text-lg"></i>
-                            <span class="font-semibold">Home</span>
-                        </a>
-                        <a href="#about"
-                            class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                            <i class="fa-solid fa-user text-lg"></i>
-                            <span class="font-semibold">About</span>
-                        </a>
-                        <a href="#skills"
-                            class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                            <i class="fa-solid fas fa-crosshairs text-lg"></i>
-                            <span class="font-semibold">Skills</span>
-                        </a>
-                        <a href="#projects"
-                            class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                            <i class="fas fa-laptop-code text-lg"></i>
-                            <span class="font-semibold">Projects</span>
-                        </a>
-                    </div>
-    
-            </div>
-        </div>
-    </nav>    
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center h-12 mt-1.5 space-x-16">
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-900 hover:text-green-500" x-show="!showMenu" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+                    <a href="#home" class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500">
+                        <i class="fas fa-home text-lg"></i>
+                        <span class="font-semibold">Home</span>
+                    </a>
+                    <a href="#about"
+                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fa-user text-lg"></i>
+                        <span class="font-semibold">About</span>
+                    </a>
+                    <a href="#skills"
+                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
+                        <i class="fa-solid fas fa-crosshairs text-lg"></i>
+                        <span class="font-semibold">Skills</span>
+                    </a>
+                    <a href="#projects"
+                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
+                        <i class="fas fa-laptop-code text-lg"></i>
+                        <span class="font-semibold">Projects</span>
+                    </a>
                 </div>
-
+    
             </div>
         </div>
 
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+                <svg class="w-6 h-6 text-gray-900 hover:text-green-500" x-show="!showMenu" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+     
         <!-- mobile menu -->
         <div class="hidden mobile-menu">
             <ul class="p-4">
 
                 <li><a href="#home"
-                        class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                        <i class="fas fa-home text-lg mx-3"></i>
-                        <span>Home</span>
+                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
+                    <i class="fas fa-home text-lg mx-3"></i>
+                    <span>Home</span>
                     </a></li>
                 <li><a href="#about"
-                        class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                        <i class="fa-solid fa-user text-lg mx-3"></i>
-                        <span>About</span>
+                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
+                    <i class="fa-solid fa-user text-lg mx-3"></i>
+                    <span>About</span>
                     </a></li>
                 <li><a href="#skills"
-                        class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                        <i class="fas fa-crosshairs text-lg mx-3"></i>
-                        <span>Skills</span>
+                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
+                    <i class="fas fa-crosshairs text-lg mx-3"></i>
+                    <span>Skills</span>
                     </a></li>
                 <li><a href="#projects"
-                        class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                        <i class="fas fa-laptop-code text-lg mx-3"></i>
-                        <span>Projects</span>
-                    </a></li>
+                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
+                    <i class="fas fa-laptop-code text-lg mx-3"></i>
+                    <span>Projects</span>
+                </a></li>
 
             </ul>
         </div>
@@ -95,7 +90,7 @@
 
     <!-- Home Section -->
 
-    <section id="home" class="relative" style="height: 92vh;">
+    <section id="home" class="relative" style="height: calc(100vh - 4rem)"> <!-- Full screen: 100vh - header height -->
         <!-- background image -->
         <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('assets/other-images/Background.png'); opacity: 0.3;"></div>
     
@@ -125,11 +120,6 @@
                             <i class="fab fa-linkedin text-5xl mt-1 ml-1"></i>
                         </a>
                     </li>
-                    <!--<li>
-                        <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=3XXjnRoAAAAJ" target="_blank" class="text-gray-900 hover:text-green-500">
-                            <i class="fas fa-graduation-cap text-5xl"></i>
-                        </a>
-                    </li>-->
                     <li>
                         <a
                             href="https://scholar.google.com/citations?hl=en&authuser=1&user=3XXjnRoAAAAJ" target="_blank" class="text-gray-900 hover:text-green-500">
@@ -246,183 +236,221 @@
     <section id="projects" class="pt-24 pb-12">
         <div class="container mx-auto">
 
-            <h2 class="text-2xl text-center text-gray-900 font-semibold mb-8">Research & Projects</h2>
+            <!--<h2 class="text-2xl text-center text-gray-900 font-semibold mb-8">Research & Projects</h2>-->
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-0">
+                
+                <!----------------------------------------------------------------------------->
+                <div class="carousel-wrapper pr-4">
+                    <h3 class="project-header">Research Experiences</h3>
+                    <div class="carousel-container">         
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+                        <!-- HCII REU -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/hcii_banner.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">HCI Research Intern</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Studied methods of learning intro programming and the effects on performance, motivation, and metacognition.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <!-- <a></a> -->
+                                    <a href="https://drive.google.com/file/d/1nzprCeJDKLVGdp7046-H0Zy0MGDmf77-/view" target="_blank"
+                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Poster
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/hcii_banner.png" alt="Project 8" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">HCI Research Intern</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                        <!-- S3D REU -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/s3d_banner.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SWE Research Intern</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2024</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    Developed processes of improving transparency and interpretability for AI and machine learning models.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://arxiv.org/pdf/2503.15512" target="_blank"
+                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
+                                        <i class="fas fa-file-alt text-2xl"></i>
+                                        Paper
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/1xyaWsh6ZU6T8L-z-8aceaLoo5MVlzlEo/view" target="_blank"
+                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Poster
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Studied methods of learning intro programming and the effects on performance, motivation, and metacognition.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://drive.google.com/file/d/1nzprCeJDKLVGdp7046-H0Zy0MGDmf77-/view" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Poster
-                            </a>
-                        </div>
+
                     </div>
+                    <div class="carousel-dots"></div>
                 </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/driplabs.png" alt="Project 7" class="w-full h-40 object-cover" />
-                    <div class="p-4 flex flex-col">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">DRIP Labs</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                <!----------------------------------------------------------------------------->
+
+                <div class="carousel-wrapper">   
+                    <h3 class="project-header">Published Works</h3>  
+                    <div class="carousel-container">         
+
+                        <!-- Honors Thesis -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/digital_commons.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fishy | Honors Thesis</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Gamified code styler software to improve code quality education.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://github.com/nalmadi/Fishy" target="_blank"
+                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
+                                        <i class="fab fa-github text-3xl"></i>
+                                        Source
+                                    </a>
+                                    <a href="https://digitalcommons.colby.edu/honorstheses/1516/" target="_blank"
+                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fas fa-file-alt text-2xl"></i>
+                                        Paper
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 1.7rem;">"Grounded in theory, lifted by dance."<br></p>
-                        <div class="flex justify-between items-center mt-auto">
-                            <a href="https://github.com/haleynoh/drip-labs" target="_blank"
-                                class="text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                <i class="fab fa-github text-3xl"></i>
-                                Source
-                            </a>
-                            <a href="https://haleynoh.github.io/drip-labs/" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Website
-                            </a>
+
+                        <!-- ICSE 2025 Paper -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/icse_2025.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Policy Impact on ML Explainability</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    An analysis of the challenges in developing interpretable explanations to better understand opaque ML models.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://ieeexplore.ieee.org/document/11024264" target="_blank"
+                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fas fa-file-alt text-2xl"></i>
+                                        Paper
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/1-0ENBaSNGLxv_w5lmhiVtxhfa-6SYXRM/view" target="_blank"
+                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fa-solid fa-trophy text-2xl"></i> SRC Winner
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- MLPronto -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/MLPronto.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">MLPronto</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">A tool for rapid, robust, and reproducible machine learning.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294924" target="_blank"
+                                        class=" text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fas fa-file-alt text-2xl"></i>
+                                        Paper
+                                    </a>
+                                    <a href="https://mlpronto.org/" target="_blank"
+                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                    <div class="carousel-dots"></div>
                 </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/digital_commons.png" alt="Project 6" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Fishy | Honors Thesis</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Gamified code styler software to improve code quality education.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://github.com/nalmadi/Fishy" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fab fa-github text-3xl"></i>
-                                Source
-                            </a>
-                            <a href="https://digitalcommons.colby.edu/honorstheses/1516/" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fas fa-file-alt text-2xl"></i>
-                                Paper
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <!----------------------------------------------------------------------------->
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/icse_2025.png" alt="Project 5" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Policy Impact on ML Explainability</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">
-                            An analysis of the challenges in developing interpretable explanations to better understand opaque ML models.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://ieeexplore.ieee.org/document/11024264" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fas fa-file-alt text-2xl"></i>
-                                Paper
-                            </a>
-                            <p>
-                                <i class="fa-solid fa-trophy text-2xl"></i>
-                                    SRC Winner
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <div class="carousel-wrapper pl-4"> 
+                    <h3 class="project-header">Software Projects</h3>    
+                    <div class="carousel-container">         
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/s3d_banner.png" alt="Project 4" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">SWE Research Intern</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2024</span>
+                        <!-- DRIP Labs -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/driplabs.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">DRIP Labs</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">"Grounded in theory, lifted by dance."<br></p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://github.com/haleynoh/drip-labs" target="_blank"
+                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fab fa-github text-3xl"></i>
+                                        Source
+                                    </a>
+                                    <a href="https://haleynoh.github.io/drip-labs/" target="_blank"
+                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Website
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">
-                            Developed processes of improving transparency and interpretability for AI and machine learning models.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://arxiv.org/pdf/2503.15512" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fas fa-file-alt text-2xl"></i>
-                                Paper
-                            </a>
-                            <a href="https://drive.google.com/file/d/1xyaWsh6ZU6T8L-z-8aceaLoo5MVlzlEo/view" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Poster
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/MLPronto.png" alt="Project 3" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">MLPronto</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
+                        <!-- Remnant Studios -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/remnant-website.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Security Software Development</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">Designed and implemented anti-autoclicker security algorithm for online gaming platforms.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://github.com/jctjad/remnant-studios" target="_blank"
+                                        class=" text-gray-800 flex items-center gap-2 hover:text-green-500">
+                                        <i class="fab fa-github text-3xl"></i>
+                                        Source
+                                    </a>
+                                    <a href="https://www.remnant-studios.com/" target="_blank"
+                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Website
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">A tool for rapid, robust, and reproducible machine learning.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294924" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fas fa-file-alt text-2xl"></i>
-                                Paper
-                            </a>
-                            <a href="https://mlpronto.org/" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/remnant-website.png" alt="Project 2" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Security Software Dev</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
+                        <!-- Gods of Olympus -->
+                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
+                            <img src="assets/other-images/Olympus.png" class="w-full h-40 object-cover flex-shrink-0" />
+                            <div class="p-4 flex-1 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-2 w-full">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gods of Olympus</h3>
+                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Multiplayer Greek Mythology platform fighter game.</p>
+                                <div class="flex justify-between items-center mb-2">
+                                    <a href="https://github.com/zaynabtariq/CS269-GodsOfOlympus" target="_blank"
+                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
+                                        <i class="fab fa-github text-3xl"></i>
+                                        Source
+                                    </a>
+                                    <a href="https://drive.google.com/file/d/1g7iVFFpqQHlXuND-nE49ry4AkF5Fs-Ol/view" target="_blank"
+                                        class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
+                                        Gameplay Video
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Designed and implemented anti-autoclicker security algorithm for online gaming platforms.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://github.com/jctjad/remnant-studios" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fab fa-github text-3xl"></i>
-                                Source
-                            </a>
-                            <a href="https://www.remnant-studios.com/" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                    <img src="assets/other-images/Olympus.png" alt="Project 1" class="w-full h-40 object-cover" />
-                    <div class="p-4">
-                        <div class="flex justify-between items-center mb-2 w-full">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Gods of Olympus</h3>
-                            <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Multiplayer Greek Mythology platform fighter game. Requires 2-players.</p>
-                        <div class="flex justify-between items-center mb-2">
-                            <a href="https://github.com/zaynabtariq/CS269-GodsOfOlympus" target="_blank"
-                                class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                <i class="fab fa-github text-3xl"></i>
-                                Source
-                            </a>
-                            <a href="https://drive.google.com/file/d/1g7iVFFpqQHlXuND-nE49ry4AkF5Fs-Ol/view" target="_blank"
-                                class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                Gameplay Video
-                            </a>
-                        </div>
                     </div>
+                    <div class="carousel-dots"></div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -436,6 +464,7 @@
     <script src="https://kit.fontawesome.com/8022519056.js" crossorigin="anonymous"></script>
     <script src="script/navbar.js"></script>
     <script src="script/smooth-scroll.js"></script>
+    <script src="script/carousel.js"></script>
 
 </body>
 
