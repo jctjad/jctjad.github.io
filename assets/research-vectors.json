@@ -1,0 +1,31 @@
+{
+  "generated": "2026-04-30",
+  "total_papers": 3,
+  "vectors": [
+    {
+      "area": "Software Engineering",
+      "papers": 2,
+      "pct": 67
+    },
+    {
+      "area": "Interpretability / XAI",
+      "papers": 2,
+      "pct": 67
+    },
+    {
+      "area": "Machine Learning",
+      "papers": 1,
+      "pct": 33
+    },
+    {
+      "area": "Empirical Methods",
+      "papers": 1,
+      "pct": 33
+    },
+    {
+      "area": "HCI",
+      "papers": 1,
+      "pct": 33
+    }
+  ]
+}

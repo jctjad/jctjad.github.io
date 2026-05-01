@@ -1,473 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jacob Tjaden — PhD Student in Computer Science">
+  <title>Jacob Tjaden</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="custom_css/style.css">
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon">
-    <title>Jacob Tjaden</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./custom_css/style.css">
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKDKYT4JV2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TKDKYT4JV2');
+  </script>
 </head>
+<body>
 
-<style> /* Alternative font (not currently being used) */
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-</style>
-
-
-<body class="bg" >
-
-    <!-- Navbar goes here -->
-    <nav class="sticky top-0 bg-gray-100 z-50 shadow-lg py-2 w-full">
-        <div class="container mx-auto px-0">
-            <div class="flex justify-center">
-    
-                <!-- Primary Navbar items -->
-                <div class="hidden md:flex items-center h-12 mt-1.5 space-x-16">
-
-                    <a href="#home" class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500">
-                        <i class="fas fa-home text-lg"></i>
-                        <span class="font-semibold">Home</span>
-                    </a>
-                    <a href="#about"
-                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fa-user text-lg"></i>
-                        <span class="font-semibold">About</span>
-                    </a>
-                    <a href="#skills"
-                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                        <i class="fa-solid fas fa-crosshairs text-lg"></i>
-                        <span class="font-semibold">Skills</span>
-                    </a>
-                    <a href="#projects"
-                        class="uppercase flex flex-col items-center text-gray-900 hover:text-green-500 transition duration-300">
-                        <i class="fas fa-laptop-code text-lg"></i>
-                        <span class="font-semibold">Projects</span>
-                    </a>
-                </div>
-    
-            </div>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-            <button class="outline-none mobile-menu-button">
-                <svg class="w-6 h-6 text-gray-900 hover:text-green-500" x-show="!showMenu" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-     
-        <!-- mobile menu -->
-        <div class="hidden mobile-menu">
-            <ul class="p-4">
-
-                <li><a href="#home"
-                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                    <i class="fas fa-home text-lg mx-3"></i>
-                    <span>Home</span>
-                    </a></li>
-                <li><a href="#about"
-                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                    <i class="fa-solid fa-user text-lg mx-3"></i>
-                    <span>About</span>
-                    </a></li>
-                <li><a href="#skills"
-                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                    <i class="fas fa-crosshairs text-lg mx-3"></i>
-                    <span>Skills</span>
-                    </a></li>
-                <li><a href="#projects"
-                    class="flex flex-col items-center text-sm px-2 py-4 text-gray-900 hover:bg-green-500 hover:text-white font-semibold transition duration-300">
-                    <i class="fas fa-laptop-code text-lg mx-3"></i>
-                    <span>Projects</span>
-                </a></li>
-
-            </ul>
-        </div>
-    </nav>
-
-
-    <!-- Home Section -->
-
-    <section id="home" class="relative" style="height: calc(100vh - 4rem)"> <!-- Full screen: 100vh - header height -->
-        <!-- background image -->
-        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('assets/other-images/Background.png'); opacity: 0.3;"></div>
-    
-        <!-- profile pic + description -->
-        <div class="relative z-10 lg:py-20 container max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-center h-full mb-4 px-2 md:px-16">
-            <div class="md:w-1/2 flex flex-col items-center py-12 relative"> 
-                <img src="assets/profile-pic.png" alt="Profile Image" class="rounded-full w-15 h-52 object-cover"/>
-                <div class="flex flex-col items-center mx-auto">
-                    <h1 class="text-xl font-bold text-gray-900 pt-3 pb-2">Jacob Tjaden</h1>
-                    <p class="text-base lg:text-lg text-center text-gray-900">
-                        Undergrad @ Colby College
-                    </p>
-                </div>
-            </div>
-        
-    
-            <!-- contact info -->
-            <div class="md:w-1/2 p-4 text-center">
-                <ul class="flex items-center justify-center space-x-6 p-2 list-none">
-                    <li>
-                        <a href="https://github.com/jctjad" target="_blank" class="text-gray-900 hover:text-green-500">
-                            <i class="fab fa-github text-5xl"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jctjaden/" target="_blank" class="text-gray-900 hover:text-green-500">
-                            <i class="fab fa-linkedin text-5xl mt-1 ml-1"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=3XXjnRoAAAAJ" target="_blank" class="text-gray-900 hover:text-green-500">
-                            <svg class="w-14 h-14 mx-auto mb-1 fill-current" viewBox="0 0 24 25" role="img" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
-                            </svg>
-                        </a>
-                    </li>
-
-                </ul>
-                <div class="py-2">
-                        <ul class="list-none">
-                            <li class="text-center text-base mx-auto text-xl">
-                                <span class="text-gray-900 flex items-center justify-center space-x-2">
-                                    <i class="fas fa-envelope text-3xl"></i>
-                                    <p>jctjad26@colby.edu</p>
-                                </span>
-                            </li>
-                        </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-
-<!-- About Section -->
-
-<section id="about" class="pt-24 pb-20 px-4">
-    <div class="container max-w-screen-lg mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-center">
-            <div class="md:pr-15 md:w-3/4">
-                <h3 class="text-2xl text-center font-semibold text-gray-900 mb-8">About Me</h3>
-                <p class="text-base text-gray-900 mt-2 text-lg">
-                    I am a 4th year undergraduate at Colby College. My research focuses on software 
-                    engineering and applied machine learning—building and analyzing tools to support a variety of 
-                    different areas. I always look forward to opportunities where I can both contribute to and learn 
-                    from complex projects and thought-provoking ideas. Please feel free to reach out for any reason!
-                </p>
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <!-- Replace with your desired image, e.g. a lab logo or university wordmark -->
+      <a href="#home" class="nav-logo-link">
+        <img src="assets/other-images/columbia-logo.png" alt="[Nav Image]" class="nav-logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <!--<li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>-->
+      </ul>
     </div>
-</section>
+  </nav>
 
+  <!-- Home / Hero -->
+  <section id="home">
+    <div class="container">
+      <div class="hero">
 
-<!-- Skills Section -->
+        <div class="hero-text">
+          <h1>Jacob Tjaden</h1>
+          <p class="hero-role">Incoming CS PhD student Fall   2026</p>
+          <!-- <p class="hero-role">1st year CS PhD student</p> -->
+          <p class="hero-affil">Columbia University &middot; 500 West 120 St, 406 Mudd &middot; New York, NY 10027</p>
+          <p class="hero-advisor">Advised by <a href="https://www.rayb.info/">Baishakhi Ray</a></p>
 
-<section id="skills">
-    <div class="container max-w-screen-lg mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-center">
+          <blockquote class="hero-tagline">
+            &ldquo;<span id="joke-text"></span>&rdquo;
+            <button id="joke-refresh" title="Another one" aria-label="Show a new joke">&#8635;</button>
+          </blockquote>
 
-            <div class="flex flex-col justify-center items-center md:pl-15 md:w-full">
-                <h2 class="text-2xl font-semibold text-gray-900 p-6 mb-1">Languages & Tools</h2>
-                <div class="grid grid-cols-3 md:grid-cols-6 md:gap-16 gap-2 mt-4">
-                    <div class="text-center">
-                        <img src="assets/icons/python.png" alt="Python Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Python</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/java.png" alt="Java Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Java</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/C++.svg" alt="C++ Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">C++/C</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/R.png" alt="R Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">R</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/photoshop.png" alt="Photoshop Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Photoshop</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/davinci.png" alt="Davinci Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Video Editing</p>
-                    </div>
+          <div class="social-links">
 
-                    <div class="text-center">
-                        <img src="assets/icons/js.svg" alt="JavaScript Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">JavaScript</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/html.svg" alt="HTML5 Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">HTML/CSS</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/lua.png" alt="Lua Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Lua</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/git.png" alt="Git Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">Git</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/github.png" alt="GitHub Icon" class="w-24 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">GitHub</p>
-                    </div>
-                    <div class="text-center">
-                        <img src="assets/icons/latex.png" alt="LaTex Icon" class="w-26 h-24 mx-auto mb-4" />
-                        <p class="text-gray-900 text-lg">LaTex</p>
-                    </div>
-                </div>
-            </div>
+            <a href="https://scholar.google.com/citations?hl=en&authuser=0&user=3XXjnRoAAAAJ"
+               target="_blank" rel="noopener" class="social-link" title="Google Scholar">
+              <svg viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+              </svg>
+              Scholar
+            </a>
 
+            <a href="https://github.com/jctjad"
+               target="_blank" rel="noopener" class="social-link" title="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/jctjaden/"
+               target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+
+          </div><!-- /.social-links -->
+        </div><!-- /.hero-text -->
+
+        <div class="hero-photo">
+          <img src="assets/profile-pic.jpg" alt="Jacob Tjaden">
+          <a href="#" class="photo-email" title="Email"
+             data-cfemail="42286c36282326272c02212d2e372f202b236c272637">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span class="__cf_email__">&#91;email&#160;protected&#93;</span>
+          </a>
         </div>
+
+      </div><!-- /.hero -->
     </div>
-</section>
+  </section>
 
+  <!-- Research -->
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
 
-    <!--Project section-->
+      <p class="prose">
+        I am an incoming CS PhD student at Columbia
+        advised by Baishakhi Ray and where I will work as part of the <a href="https://daplab.cs.columbia.edu/">DAPLab</a>.
+        My research sits at the intersection of <strong class="highlight">AI</strong> and
+        <strong class="highlight">software engineering</strong> with a focus on <i>trust in AI coding agents</i>. 
+        Learn more about the field <a href="https://cacm.acm.org/opinion/agentic-ai-software-engineers-programming-with-trust/">here</a>.
+      </p>
+      <p class="prose">
+        <!-- Previously, I completed my undergrad in CS at <strong class="highlight">Colby College</strong> with minors in math and econ financial markets. -->
+        Currently, I am completing my undergrad in CS at <strong class="highlight">Colby College</strong> with minors in math and econ financial markets.
+        At Colby, my honors thesis was advised by <strong class="highlight">Prof. Naser Al Madi</strong> where I built a web tool called <i>Fishy</i>
+        to help programmers improve the quality of their code.
+        I have also been a part of two NSF REUs at CMU, one in the domain of software engineering and the other in HCI.
+      </p>
+      <p class="prose">
+        Outside of research, I play ultimate frisbee semi-competitively, and I casually do
+        digital design in the form of photoshop and video editing. Please feel free to reach out to chat or ask questions!
+      </p>
 
-    <section id="projects" class="pt-24 pb-12">
-        <div class="container mx-auto">
-
-            <!--<h2 class="text-2xl text-center text-gray-900 font-semibold mb-8">Research & Projects</h2>-->
-            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-0">
-                
-                <!----------------------------------------------------------------------------->
-                <div class="carousel-wrapper pr-4">
-                    <h3 class="project-header">Research Experiences</h3>
-                    <div class="carousel-container">         
-
-                        <!-- HCII REU -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/hcii_banner.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">HCI Research Intern</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">Studied methods of learning intro programming and the effects on performance, motivation, and metacognition.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <!-- <a></a> -->
-                                    <a href="https://drive.google.com/file/d/1nzprCeJDKLVGdp7046-H0Zy0MGDmf77-/view" target="_blank"
-                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Poster
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- S3D REU -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/s3d_banner.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">SWE Research Intern</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2024</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">
-                                    Developed processes of improving transparency and interpretability for AI and machine learning models.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://arxiv.org/pdf/2503.15512" target="_blank"
-                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                        <i class="fas fa-file-alt text-2xl"></i>
-                                        Paper
-                                    </a>
-                                    <a href="https://drive.google.com/file/d/1xyaWsh6ZU6T8L-z-8aceaLoo5MVlzlEo/view" target="_blank"
-                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Poster
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="carousel-dots"></div>
-                </div>
-
-                <!----------------------------------------------------------------------------->
-
-                <div class="carousel-wrapper">   
-                    <h3 class="project-header">Published Works</h3>  
-                    <div class="carousel-container">         
-
-                        <!-- Honors Thesis -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/digital_commons.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fishy | Honors Thesis</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">Gamified code styler software to improve code quality education.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://github.com/nalmadi/Fishy" target="_blank"
-                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                        <i class="fab fa-github text-3xl"></i>
-                                        Source
-                                    </a>
-                                    <a href="https://digitalcommons.colby.edu/honorstheses/1516/" target="_blank"
-                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                        <i class="fas fa-file-alt text-2xl"></i>
-                                        Paper
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- ICSE 2025 Paper -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/icse_2025.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Policy Impact on ML Explainability</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">
-                                    An analysis of the challenges in developing interpretable explanations to better understand opaque ML models.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://ieeexplore.ieee.org/document/11024264" target="_blank"
-                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                        <i class="fas fa-file-alt text-2xl"></i>
-                                        Paper
-                                    </a>
-                                    <a class="text-gray-800 flex items-center gap-2">
-                                        <i class="fa-solid fa-trophy text-2xl"></i> Award Winner
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- MLPronto -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/MLPronto.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">MLPronto</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">A tool for rapid, robust, and reproducible machine learning.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0294924" target="_blank"
-                                        class=" text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                        <i class="fas fa-file-alt text-2xl"></i>
-                                        Paper
-                                    </a>
-                                    <a href="https://mlpronto.org/" target="_blank"
-                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Website
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="carousel-dots"></div>
-                </div>
-
-                <!----------------------------------------------------------------------------->
-                
-                <div class="carousel-wrapper pl-4"> 
-                    <h3 class="project-header">Software Projects</h3>    
-                    <div class="carousel-container">
-                        
-                        <!-- Remnant Studios -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/remnant-ai.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Remnant AI</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">State-of-the-art security software to protect online gaming platforms.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://github.com/jctjad/remnant-studios" target="_blank"
-                                        class=" text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                        <i class="fab fa-github text-3xl"></i>
-                                        Source
-                                    </a>
-                                    <a href="https://www.remnant-studios.com/" target="_blank"
-                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Website
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- DRIP Labs -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/driplabs.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">DRIP Labs</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2025</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4">Summer research group celebrating the HCI REU cohort at CMU.<br></p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://github.com/haleynoh/drip-labs" target="_blank"
-                                        class="text-gray-800 flex items-center gap-2 hover:text-green-500">
-                                        <i class="fab fa-github text-3xl"></i>
-                                        Source
-                                    </a>
-                                    <a href="https://haleynoh.github.io/drip-labs/" target="_blank"
-                                        class="bg-gray-800 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Website
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Gods of Olympus -->
-                        <div class="carousel-item bg-gray-100 rounded-lg overflow-hidden shadow-md flex flex-col h-80 sm:h-96">
-                            <img src="assets/other-images/Olympus.png" class="w-full h-40 object-cover flex-shrink-0" />
-                            <div class="p-4 flex-1 flex flex-col justify-between">
-                                <div class="flex justify-between items-center mb-2 w-full">
-                                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gods of Olympus</h3>
-                                    <span class="relative -top-1 text-xs uppercase tracking-wide bg-gray-200 px-2 py-0.5 rounded-full">2023</span>
-                                </div>
-                                <p class="text-gray-600 text-sm mb-4" style="padding-bottom: 0.7rem;">Multiplayer Greek Mythology platform fighter game.</p>
-                                <div class="flex justify-between items-center mb-2">
-                                    <a href="https://github.com/zaynabtariq/CS269-GodsOfOlympus" target="_blank"
-                                        class=" text-gray-800 flex  items-center gap-2  hover:text-green-500">
-                                        <i class="fab fa-github text-3xl"></i>
-                                        Source
-                                    </a>
-                                    <a href="https://drive.google.com/file/d/1g7iVFFpqQHlXuND-nE49ry4AkF5Fs-Ol/view" target="_blank"
-                                        class="bg-gray-900 p-2 text-white hover:underline hover:bg-green-500 rounded">
-                                        Gameplay Video
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="carousel-dots"></div>
-                </div>
-            </div>
+      <!--
+      <div class="research-vectors">
+        <h3 class="vectors-heading">Research Vectors</h3>
+        <div class="vectors-bars" id="vectors-bars">
+          <div class="vectors-loading">Loading&hellip;</div>
         </div>
-    </section>
+        <p class="vectors-meta" id="vectors-meta"></p>
+      </div>
+      -->
 
+    </div>
+  </section>
 
-    <!--Footer part-->
+  <!-- Publications -->
+  <section id="publications">
+    <div class="container">
+      <h2 class="section-title">Featured Publications</h2>
+      <!-- <p class="section-note">
+        For the most up-to-date list, see my
+        <a href="https://scholar.google.com/citations?hl=en&authuser=0&user=3XXjnRoAAAAJ"
+           target="_blank" rel="noopener">Google Scholar</a> profile.
+      </p> -->
 
-    <footer class=" bg-gray-100 text-gray-900 py-6 w-full" style="box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);">
-        <div class="container mx-auto px-4 flex flex-col items-center"></div>
-    </footer>
+      <ul class="pub-list">
 
-    <script src="https://kit.fontawesome.com/8022519056.js" crossorigin="anonymous"></script>
-    <script src="script/navbar.js"></script>
-    <script src="script/smooth-scroll.js"></script>
-    <script src="script/carousel.js"></script>
+        <!-- ─── 2026 ─────────────────────────────────────────── -->
+        <li class="pub-year-label">2026</li>
+
+        <li class="pub-item">
+          <p class="pub-title">
+            Policy alone is probably not the solution: A large-scale experiment on how developers struggle to design meaningful end-user explanations
+          </p>
+          <p class="pub-authors">
+            Nadia Nahar, Zahra Abba Omar, <strong>Jacob Tjaden</strong>, et al.
+          </p>
+          <p class="pub-venue">
+            Submitted for publication<em></em>, 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2503.15512" target="_blank" rel="noopener" class="pub-link">[arXiv]</a>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <p class="pub-title">
+            Less Talk, More Code: Practice-Based Instruction Improves Programming Skill Acquisition
+          </p>
+          <p class="pub-authors">
+            Gillian Gold, <strong>Jacob Tjaden</strong>, Paulo Carvalho
+          </p>
+          <p class="pub-venue">
+            Accepted to Cognitive Science Society (CogSci), 2026
+          </p>
+          <div class="pub-links">
+            <a href="https://osf.io/preprints/psyarxiv/p428m" target="_blank" rel="noopener" class="pub-link">[arXiv]</a>
+          </div>
+        </li>
+
+        <!-- ─── 2025 ─────────────────────────────────────────── -->
+        <li class="pub-year-label">2025</li>
+
+        <li class="pub-item">
+          <p class="pub-title">
+            The Balancing Act of Policies in Developing Machine Learning Explanations
+          </p>
+          <p class="pub-authors">
+            <strong>Jacob Tjaden</strong>
+          </p>
+          <p class="pub-venue">
+            International Conference on Software Engineering (ICSE), 2025
+          </p>
+          <div class="pub-links">
+            <a href="https://ieeexplore.ieee.org/document/11024264" target="_blank" rel="noopener" class="pub-link">[Paper]</a>
+            <a href="https://drive.google.com/file/d/1xyaWsh6ZU6T8L-z-8aceaLoo5MVlzlEo/view" target="_blank" rel="noopener" class="pub-link">[Poster]</a>
+            <span class="pub-award">&#x1F3C6; SRC Winner</span>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+
+      <div class="achievements-grid">
+
+        <!-- ─── 2026 ─────────────────────────────────────────── -->
+        <div class="achievement-card">
+          <div class="achievement-img-wrap">
+            <img src="assets/other-images/nsf.png" alt="NSF GRFP Banner">
+            <p class="achievement-date">2026</p>
+          </div>
+          <div class="achievement-body">
+            <h5 class="achievement-title">NSF Graduate Research Fellowship (GRFP)</h5>
+            <div class="achievement-footer">
+              <!-- <a href="#" class="achievement-tag" target="_blank" rel="noopener">Article</a> -->
+              <p class="achievement-desc">Three years of funding</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── 2025 ─────────────────────────────────────────── -->
+        <div class="achievement-card">
+          <div class="achievement-img-wrap">
+            <img src="assets/other-images/icse_2025.png" alt="ICSE 2025 Banner">
+            <p class="achievement-date">2025</p>
+          </div>
+          <div class="achievement-body">
+            <h5 class="achievement-title">Winner of Student Research Competition</h5>
+            <p class="achievement-desc">Awarded best undergraduate research at ICSE 2025</p>
+          </div>
+        </div>
+
+      </div> <!-- /.achievements-grid -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Jacob Tjaden</p>
+    </div>
+  </footer>
+
+  <script src="script/navbar.js"></script>
+  <script src="script/smooth-scroll.js"></script>
+  <script src="script/research-vectors.js"></script>
 
 </body>
-
 </html>
