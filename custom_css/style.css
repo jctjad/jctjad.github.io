@@ -192,6 +192,10 @@ h1 {
   line-height: 1.6;
 }
 
+#joke-text {
+  white-space: pre-line;
+}
+
 #joke-refresh {
   display: inline;
   background: none;

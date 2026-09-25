@@ -19,11 +19,13 @@ if (navToggle && navLinks) {
 
 // CS jokes — add more to this array as needed
 var jokes = [
-  "There are 10 types of people in the world: those who understand binary, and those who don't.",
   "Siri recommended I \"touch grass\".",
   "I'm not hallucinating. I'm being creative.",
-  "After Claude coded my entire website I said \"thanks bestie\" and it told me to go make some real friends...",
-  "Artificial intelligence; natural humor."
+  "After Claude made my website I said \"thanks bestie\" and it told me to go make some real friends...",
+  "Artificial intelligence; natural humor.",
+  "My therapist said I spend too much time talking to chatbots—you can figure out who my therapist is.",
+  "I asked my GPS to take me somewhere I'd be happy. It took me to \"Recalculating...\"",
+  "Prompt: How is the name \"Tjaden\" pronounced?\nClaude: idk lol"
 ];
 
 var jokeEl = document.getElementById('joke-text');
@@ -41,9 +43,22 @@ function showRandomJoke() {
 showRandomJoke();
 if (jokeBtn) jokeBtn.addEventListener('click', showRandomJoke);
 
-// Footer year
+// Footer year (in Roman numerals)
+function toRoman(n) {
+  var numerals = [
+    [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
+    [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'],
+    [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']
+  ];
+  var result = '';
+  numerals.forEach(function (pair) {
+    while (n >= pair[0]) { result += pair[1]; n -= pair[0]; }
+  });
+  return result;
+}
+
 const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+if (yearEl) yearEl.textContent = toRoman(new Date().getFullYear());
 
 // Cloudflare Scrape Shield — decode obfuscated email addresses
 document.querySelectorAll('[data-cfemail]').forEach(function (el) {
