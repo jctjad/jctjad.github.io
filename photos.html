@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jacob Tjaden — Photos">
+  <title>Photos · Jacob Tjaden</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="custom_css/style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKDKYT4JV2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Skip tracking in browsers opted out from the dashboard (your own visits)
+    try { if (localStorage.getItem('jt-no-track') === '1') window['ga-disable-G-TKDKYT4JV2'] = true; } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-TKDKYT4JV2');
+  </script>
+</head>
+<body>
+
+  <!-- Navigation (links point back to sections on the home page) -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo-link">
+        <img src="assets/other-images/columbia-logo.png" alt="[Nav Image]" class="nav-logo">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#achievements">Achievements</a></li>
+        <li><a href="photos.html" class="active" aria-current="page">Photos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Photos -->
+  <section id="photos">
+    <div class="container">
+      <h2 class="section-title section-title--split">
+        Photos
+        <span class="photo-credit">taken by Kristen, Nano, and Roark</span>
+      </h2>
+
+      <!-- Filled in by script/photos.js — edit the list there to add photos -->
+      <div class="photo-grid" id="photo-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script/navbar.js"></script>
+  <script src="script/analytics.js"></script>
+  <script src="script/photos.js"></script>
+
+</body>
+</html>

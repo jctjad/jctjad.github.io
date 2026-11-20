@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Keep this page out of search engines. No Google Analytics tag here, so viewing it isn't counted. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="custom_css/style.css">
+  <link rel="stylesheet" href="custom_css/dashboard.css">
+</head>
+<body>
+
+  <main class="dash container">
+    <a href="index.html" class="dash-back">&larr; Back to site</a>
+
+    <h2 class="section-title section-title--split">
+      Site Analytics
+      <span class="dash-meta" id="dash-updated"></span>
+    </h2>
+
+    <div class="dash-banner" id="dash-banner" hidden></div>
+
+    <!-- Password unlock (data is encrypted; decrypted in the browser) -->
+    <form class="dash-lock" id="dash-lock" hidden>
+      <p class="dash-lock-title">This dashboard is password-protected.</p>
+      <div class="dash-lock-row">
+        <input type="password" id="dash-password" class="dash-input" placeholder="Password"
+               autocomplete="current-password" aria-label="Password" required>
+        <button type="submit" class="dash-btn" id="dash-unlock">Unlock</button>
+      </div>
+      <label class="dash-optout">
+        <input type="checkbox" id="dash-remember">
+        Remember on this device
+      </label>
+      <p class="dash-lock-error" id="dash-lock-error" role="alert"></p>
+    </form>
+
+    <div id="dash-body" hidden>
+      <div class="dash-controls">
+        <div class="dash-seg" role="group" aria-label="Group by">
+          <button type="button" data-gran="week" aria-pressed="true">Week</button>
+          <button type="button" data-gran="month" aria-pressed="false">Month</button>
+          <button type="button" data-gran="year" aria-pressed="false">Year</button>
+          <button type="button" data-gran="all" aria-pressed="false">All time</button>
+        </div>
+        <select class="dash-select" id="dash-period" aria-label="Period"></select>
+      </div>
+
+      <!-- Click a tile to chart that metric -->
+      <div class="dash-tiles" id="dash-tiles"></div>
+
+      <div class="dash-panel">
+        <h3 id="chart-title"></h3>
+        <div class="dash-chart" id="dash-chart"></div>
+        <details class="dash-table">
+          <summary>Show as table</summary>
+          <div id="dash-table-body"></div>
+        </details>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-panel">
+          <h3>Paper clicks</h3>
+          <ul class="bl" id="list-papers"></ul>
+        </div>
+        <div class="dash-panel">
+          <h3>Interactions</h3>
+          <ul class="bl" id="list-interactions"></ul>
+        </div>
+        <div class="dash-panel">
+          <h3>Where visits come from</h3>
+          <ul class="bl" id="list-sources"></ul>
+        </div>
+        <div class="dash-panel">
+          <h3>Visitor countries</h3>
+          <ul class="bl" id="list-countries"></ul>
+        </div>
+        <div class="dash-panel dash-panel--wide">
+          <h3>Pages</h3>
+          <ul class="bl" id="list-pages"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-foot">
+      <label class="dash-optout">
+        <input type="checkbox" id="dash-notrack">
+        Don't count my own visits from this browser
+      </label>
+      <span>
+        <span id="dash-source"></span>
+        <button type="button" class="dash-linkbtn" id="dash-logout" hidden>Lock</button>
+      </span>
+    </div>
+  </main>
+
+  <script src="script/dashboard.js"></script>
+
+</body>
+</html>

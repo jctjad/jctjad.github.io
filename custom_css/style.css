@@ -677,6 +677,70 @@ section:last-of-type {
   }
 }
 
+/* ─── Photos ────────────────────────────────────────────────── */
+
+.nav-links a.active {
+  color: var(--columbia-blue);
+}
+
+.section-title--split {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.photo-credit {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #888;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.photo-item {
+  margin: 0;
+}
+
+.photo-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+@media (max-width: 560px) {
+  .photo-grid {
+    gap: 0.75rem;
+  }
+
+  .photo-frame {
+    border-radius: 8px;
+  }
+}
+
 /* ─── Footer ────────────────────────────────────────────────── */
 
 footer {

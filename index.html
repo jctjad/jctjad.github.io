@@ -16,6 +16,8 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Skip tracking in browsers opted out from the dashboard (your own visits)
+    try { if (localStorage.getItem('jt-no-track') === '1') window['ga-disable-G-TKDKYT4JV2'] = true; } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-TKDKYT4JV2');
   </script>
@@ -39,6 +41,7 @@
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#achievements">Achievements</a></li>
+        <!-- <li><a href="photos.html">Photos</a></li> -->
         <!--<li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>-->
       </ul>
     </div>
@@ -253,6 +256,7 @@
   </footer>
 
   <script src="script/navbar.js"></script>
+  <script src="script/analytics.js"></script>
   <script src="script/smooth-scroll.js"></script>
   <script src="script/research-vectors.js"></script>
 

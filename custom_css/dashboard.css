@@ -1,0 +1,400 @@
+/* ─── Dashboard (dashboard.html only) ───────────────────────── */
+
+.dash {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.dash-back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.dash-meta {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.dash-banner {
+  background: #f3f6fb;
+  border: 1px solid #d7e0ef;
+  color: var(--columbia-blue-png);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Password lock */
+.dash-lock {
+  max-width: 380px;
+  margin: 2.5rem auto 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dash-lock[hidden] {
+  display: none;
+}
+
+.dash-lock-title {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.dash-lock-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dash-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.dash-input:focus {
+  outline: 2px solid var(--columbia-blue);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.dash-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--columbia-blue);
+  border: 0;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+
+.dash-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.dash-lock-error {
+  font-size: 0.8rem;
+  color: #b42318;
+  min-height: 1.2em;
+}
+
+.dash-linkbtn {
+  font: inherit;
+  font-size: inherit;
+  color: var(--columbia-blue);
+  font-weight: 600;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+/* Controls */
+.dash-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.dash-seg {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+.dash-seg button {
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #555;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+}
+
+.dash-seg button[aria-pressed="true"] {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.dash-select {
+  font: inherit;
+  font-size: 0.85rem;
+  color: #111;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  max-width: 100%;
+}
+
+.dash-select[hidden] {
+  display: none;
+}
+
+/* KPI tiles */
+.dash-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dash-tile {
+  font: inherit;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.dash-tile:hover {
+  border-color: #c3cee2;
+}
+
+.dash-tile[aria-pressed="true"] {
+  border-color: var(--columbia-blue);
+  box-shadow: inset 0 0 0 1px var(--columbia-blue);
+}
+
+.dash-tile-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.dash-tile-value {
+  display: block;
+  font-family: 'Google Sans', 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.25;
+  margin: 0.15rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-tile-delta {
+  display: block;
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+/* Panels */
+.dash-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.1rem 1.1rem;
+  min-width: 0;
+}
+
+.dash-panel h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dash-panel--wide {
+  grid-column: 1 / -1;
+}
+
+/* Bar chart */
+.dash-chart {
+  position: relative;
+  height: 220px;
+}
+
+.dash-chart svg {
+  display: block;
+  overflow: visible;
+}
+
+.dash-chart .hit {
+  cursor: pointer;
+}
+
+.dash-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.dash-tip.show {
+  opacity: 1;
+}
+
+.dash-tip b {
+  font-weight: 600;
+}
+
+.dash-table {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.dash-table summary {
+  cursor: pointer;
+}
+
+.dash-table table {
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 360px;
+}
+
+.dash-table td,
+.dash-table th {
+  text-align: left;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  color: #333;
+  font-weight: 400;
+}
+
+.dash-table td:last-child,
+.dash-table th:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ranked bar lists */
+.bl {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.bl-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.bl-label {
+  color: #333;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bl-value {
+  color: #111;
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.bl-sub {
+  color: #9ca3af;
+  font-weight: 400;
+  margin-left: 0.4rem;
+}
+
+.bl-track {
+  height: 4px;
+  margin-top: 0.3rem;
+  background: #f3f4f6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bl-fill {
+  height: 100%;
+  background: var(--columbia-blue);
+  border-radius: 999px;
+  opacity: 0.85;
+}
+
+.dash-empty {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Footer */
+.dash-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.dash-optout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .dash-tiles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-tile-value {
+    font-size: 1.35rem;
+  }
+}

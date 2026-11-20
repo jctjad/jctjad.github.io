@@ -1,0 +1,58 @@
+name: Update Analytics
+
+on:
+  schedule:
+    - cron: "17 6 * * *"      # daily, 06:17 UTC
+  workflow_dispatch:          # allow manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write         # needed to push the updated JSON
+    env:
+      GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+      GA_CREDENTIALS_JSON: ${{ secrets.GA_CREDENTIALS_JSON }}
+      DASHBOARD_PASSWORD: ${{ secrets.DASHBOARD_PASSWORD }}
+
+    steps:
+      - name: Check secrets are configured
+        id: check
+        run: |
+          if [ -z "$GA_PROPERTY_ID" ] || [ -z "$GA_CREDENTIALS_JSON" ] || [ -z "$DASHBOARD_PASSWORD" ]; then
+            echo "::notice::GA_PROPERTY_ID / GA_CREDENTIALS_JSON / DASHBOARD_PASSWORD secrets not set — skipping."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout repo
+        if: steps.check.outputs.ok == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.check.outputs.ok == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch analytics
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          pip install --quiet google-analytics-data cryptography
+          printf '%s' "$GA_CREDENTIALS_JSON" > "$RUNNER_TEMP/ga-credentials.json"
+          GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/ga-credentials.json" python3 scripts/update_analytics.py
+
+      - name: Commit updated JSON (if changed)
+        if: steps.check.outputs.ok == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/analytics.enc.json
+          if git diff --cached --quiet; then
+            echo "No changes — skipping commit."
+          else
+            git commit -m "chore: update dashboard data [skip ci]"
+            git pull --rebase
+            git push
+          fi
