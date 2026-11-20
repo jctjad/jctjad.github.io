@@ -9,15 +9,13 @@
 // An entry with an empty src shows as a blank placeholder tile.
 
 var photos = [
-  { src: '', alt: '', caption: '' },
-  { src: '', alt: '', caption: '' },
-  { src: '', alt: '', caption: '' },
-  { src: '', alt: '', caption: '' },
-  { src: '', alt: '', caption: '' },
-  { src: '', alt: '', caption: '' }
-
-  // Example:
-  // { src: 'assets/photos/ultimate.jpg', alt: 'Ultimate frisbee tournament', caption: 'Nationals, 2026' },
+  { src: 'assets/photos/ny_minute.jpg', alt: 'Manhattan frisbee tournament', caption: 'taken by Roark' },
+  { src: 'assets/photos/party_people.jpg', alt: 'Group grad photo', caption: '' },
+  { src: 'assets/photos/seniors.jpg', alt: 'Seniors practice close-up', caption: 'taken by Nano' },
+  { src: 'assets/photos/greece.jpg', alt: 'Christmas card 2025', caption: '' },
+  { src: 'assets/photos/lobby_p_24.jpg', alt: 'Lobster pot 2024', caption: 'taken by Kristen' },
+  // { src: 'assets/photos/acadia.png', alt: 'Acadia', caption: '' },
+  { src: 'assets/photos/museum.png', alt: 'Museum', caption: '' }
 ];
 
 var photoGrid = document.getElementById('photo-grid');

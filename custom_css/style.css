@@ -679,10 +679,6 @@ section:last-of-type {
 
 /* ─── Photos ────────────────────────────────────────────────── */
 
-.nav-links a.active {
-  color: var(--columbia-blue);
-}
-
 .section-title--split {
   display: flex;
   justify-content: space-between;
@@ -706,6 +702,7 @@ section:last-of-type {
 
 .photo-item {
   margin: 0;
+  position: relative;
 }
 
 .photo-frame {
@@ -724,11 +721,25 @@ section:last-of-type {
   display: block;
 }
 
+/* Caption sits inside the photo, bottom-left (matches .achievement-date) */
 .photo-caption {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
-  color: #555;
-  line-height: 1.55;
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  max-width: calc(100% - 1.2rem);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.52);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 @media (max-width: 560px) {
